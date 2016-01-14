@@ -47,7 +47,7 @@ snippet gis
 snippet ism
 	isMounted()
 snippet rclass
-	class ${1:ClassName} React.Component {
+	class ${1:ClassName} extends React.Component {
 		render() {
 			return (
 				${0:<div />}
@@ -56,6 +56,13 @@ snippet rclass
 	}
 
 	export default $1;
+snippet con
+	constructor(props) {
+		super(props)
+		${1}
+	}
+snippet bf
+	this.${1} = this.$1.bind(this);
 snippet pt
 	const propTypes = {
 		${1}: React.PropTypes.${2:string}
